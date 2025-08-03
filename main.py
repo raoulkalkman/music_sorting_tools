@@ -53,8 +53,8 @@ def run(pioneer: str, output: str):
 
     # Check if there is enough space in the output folder
         
-    int required_size = _get_total_size(pioneer)
-    int free_space = _get_free_space(output)
+    required_size: int  = _get_total_size(pioneer)
+    free_space: int     = _get_free_space(output)
     
     if required_size > free_space:
         raise ValueError(
